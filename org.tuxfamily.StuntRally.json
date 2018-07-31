@@ -120,7 +120,7 @@
             ],
             "build-commands": [
                 "./bootstrap.sh --prefix=/app --with-libraries=system,filesystem,thread,wave",
-                "./b2 install variant=release link=shared runtime-link=shared -j `nproc`"
+                "./b2 install variant=release link=shared runtime-link=shared -j $FLATPAK_BUILDER_N_JOBS"
             ]
         },
         {

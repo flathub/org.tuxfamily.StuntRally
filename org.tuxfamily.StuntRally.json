@@ -144,6 +144,7 @@
                 "-DOGRE_BUILD_TESTS=FALSE"
             ],
             "build-options": {
+                "cxxflags": "-L/app/lib -lboost_system -lboost_thread",
                 "ldflags": "-L/app/lib -lboost_system -lboost_thread"
             },
             "sources": [
@@ -177,6 +178,7 @@
                 "-DMYGUI_BUILD_DEMOS=OFF"
             ],
             "build-options": {
+                "cxxflags": "-L/app/lib -lboost_system",
                 "ldflags": "-L/app/lib -lboost_system"
             },
             "sources": [

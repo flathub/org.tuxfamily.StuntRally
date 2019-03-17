@@ -209,16 +209,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/stuntrally/stuntrally/archive/2.6.tar.gz",
-                    "sha256": "8cc309d27d26f78dcc596440547d68b5e41d02ef830df2d52d38611d45ebbaca"
-                },
-                {
-                    "type": "patch",
-                    "path": "stuntrally.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "stuntrally-l10n.patch"
+                    "url": "https://github.com/stuntrally/stuntrally/archive/2.6.1.tar.gz",
+                    "sha256": "9bf0507c4235ffaeee019a852124b6cffc311afe3275ae8472eadff4441fb8ff"
                 },
                 {
                     "type": "file",
@@ -235,8 +227,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/stuntrally/tracks/archive/2.6.tar.gz",
-                    "sha256": "4bce700516a2a178ac04cfbf7df2887ba42225802f5a3e670f770ea01345687b"
+                    "url": "https://github.com/stuntrally/tracks/archive/2.6.1.tar.gz",
+                    "sha256": "fa83ecf6dcc6e906542f3bd07677ad4369cfe4d12c639837a0f90946d47dd474"
                 }
             ],
             "build-commands": [

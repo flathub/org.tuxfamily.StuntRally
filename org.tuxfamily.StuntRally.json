@@ -43,16 +43,6 @@
             ]
         },
         {
-            "name": "PCRE",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.pcre.org/pub/pcre/pcre-8.42.zip",
-                    "sha256": "84c3c4d2eb9166aaed44e39b89e4b6a49eac6fed273bdb844c94fb6c8bdda1b5"
-                }
-            ]
-        },
-        {
             "name": "SWIG",
             "config-opts": [
                 "--without-boost",

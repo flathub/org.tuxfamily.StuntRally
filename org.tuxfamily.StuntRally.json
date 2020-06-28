@@ -207,11 +207,20 @@
                     "sha256": "9bf0507c4235ffaeee019a852124b6cffc311afe3275ae8472eadff4441fb8ff"
                 },
                 {
+                    "type": "patch",
+                    "path": "cmake_icon.patch"
+                },
+                {
+                    "type": "file",
+                    "path": "stuntrally.png"
+                },
+                {
                     "type": "file",
                     "path": "org.tuxfamily.StuntRally.appdata.xml"
                 }
             ],
             "post-install": [
+                "install -Dm644 ../stuntrally.png /app/share/icons/hicolor/256x256/apps/stuntrally.png",
                 "install -Dm644 ../org.tuxfamily.StuntRally.appdata.xml /app/share/appdata/org.tuxfamily.StuntRally.appdata.xml"
         ]
         },

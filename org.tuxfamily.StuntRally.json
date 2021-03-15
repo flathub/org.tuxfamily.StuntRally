@@ -225,7 +225,10 @@
                 }
             ],
             "post-install": [
-                "install -Dm644 ../org.tuxfamily.StuntRally.appdata.xml /app/share/appdata/org.tuxfamily.StuntRally.appdata.xml"
+                "install -Dm644 ../org.tuxfamily.StuntRally.appdata.xml /app/share/appdata/org.tuxfamily.StuntRally.appdata.xml",
+                "mv /app/share/icons/hicolor/64x64/apps/sr-editor.png /app/share/icons/hicolor/64x64/apps/org.tuxfamily.StuntRally.Editor.png",
+                "sed -i 's:Icon=sr-editor:Icon=org.tuxfamily.StuntRally.Editor:' /app/share/applications/sr-editor.desktop",
+                "mv /app/share/applications/sr-editor.desktop /app/share/applications/org.tuxfamily.StuntRally.Editor.desktop"
         ]
         },
         {

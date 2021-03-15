@@ -157,8 +157,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/OGRECave/ogre/archive/v1.12.11.tar.gz",
-                    "sha256": "7eae65ff6e922217a3bef3761c715450a1deb196b16d283a005904403335a22b"
+                    "url": "https://github.com/OGRECave/ogre/archive/v1.12.10.tar.gz",
+                    "sha256": "d4f791e6c4df9307efb8e4e92652233f948ea06d5e22e065f299c9ab8fc5cfa4"
                 }
             ]
         },

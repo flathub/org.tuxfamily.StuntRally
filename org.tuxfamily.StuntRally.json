@@ -157,8 +157,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/OGRECave/ogre/archive/v1.12.12.tar.gz",
-                    "sha256": "3b8a5ef0188f1e3cfa2262b6e145400121d61a9004ad347e88e662174f0059a6"
+                    "url": "https://github.com/OGRECave/ogre/archive/v13.0.0.tar.gz",
+                    "sha256": "404c91b0ab27edb45a643bc268143589c8f5160125d531cbf5d958fa55136063"
                 }
             ]
         },
@@ -191,8 +191,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/MyGUI/mygui/archive/MyGUI3.4.0.tar.gz",
-                    "sha256": "d1d5f294670ae71f7200ed4b30859018281d8cfd45d6a38d18b97a4aba604c42"
+                    "url": "https://github.com/MyGUI/mygui/archive/MyGUI3.4.1.tar.gz",
+                    "sha256": "bdf730bdeb4ad89e6b8223967db01aa5274d2b93adc2c0d6aa4842faeed4de1a"
                 }
             ]
         },

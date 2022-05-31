@@ -85,7 +85,7 @@
             "name": "FreeImage",
             "no-autogen": true,
             "build-options": {
-                "cxxflags": "-Wno-narrowing"
+                "cxxflags": "-Wno-narrowing -std=c++14"
             },
             "sources": [
                 {

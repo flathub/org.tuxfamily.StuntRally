@@ -217,7 +217,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/stuntrally.git",
-                    "commit": "98aa335c22269c8029f282830878756b5fb905d8"
+                    "tag": "2.6.2",
+                    "commit": "5349e1601a1554d393cb192719de7ad33263195f"
                 },
                 {
                     "type": "file",
@@ -238,6 +239,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/tracks.git",
+                    "tag": "2.6.2",
                     "commit": "78fa3c7c6fed8fb40fad1589ee61fe86e64e6694"
                 }
             ],

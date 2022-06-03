@@ -213,7 +213,7 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "build-options": {
-                "cxxflags": "-fpermissive"
+                "cxxflags": "-fpermissive -std=c++14 -Wno-deprecated-declarations"
             },
             "sources": [
                 {

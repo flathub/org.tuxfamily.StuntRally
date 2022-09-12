@@ -219,8 +219,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/stuntrally.git",
-                    "tag": "2.6.2",
-                    "commit": "5349e1601a1554d393cb192719de7ad33263195f"
+                    "commit": "5ce6dde7273e61bf504e4b60bd288bfeac3a8ecb"
                 },
                 {
                     "type": "file",
@@ -241,8 +240,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/tracks.git",
-                    "tag": "2.6.2",
-                    "commit": "78fa3c7c6fed8fb40fad1589ee61fe86e64e6694"
+                    "commit": "bef80ff5cdec845c3d04b7066c7d96eb025332db"
                 }
             ],
             "build-commands": [

@@ -17,6 +17,7 @@
         "/include",
         "/lib/pkgconfig",
         "/share/aclocal",
+        "/share/doc",
         "/share/man",
         "*.la", "*.a"
     ],
@@ -209,6 +210,38 @@
             ]
         },
         {
+            "name": "tinyxml",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://sources.buildroot.net/tinyxml/tinyxml-2.6.2_2.tar.gz",
+                    "sha256": "8164c9ad48b9028667768a584d62f7760cfbfb90d0dd6214ad174403058da10c"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "autoreconf -vfi"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "tinyxml2",
+            "buildsystem": "cmake-ninja",
+            "build-options": {
+                "cflags": "-fPIC",
+                "cxxflags": "-fPIC"
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/leethomason/tinyxml2/archive/refs/tags/9.0.0.tar.gz",
+                    "sha256": "cc2f1417c308b1f6acc54f88eb70771a0bf65f76282ce5c40e54cfe52952702c"
+                }
+            ]
+        },
+        {
             "name": "stuntrally",
             "buildsystem": "cmake-ninja",
             "builddir": true,
@@ -228,7 +261,7 @@
             ],
             "post-install": [
                 "install -Dm644 ../org.tuxfamily.StuntRally.appdata.xml /app/share/appdata/org.tuxfamily.StuntRally.appdata.xml",
-                "mv /app/share/icons/hicolor/64x64/apps/sr-editor.png /app/share/icons/hicolor/64x64/apps/org.tuxfamily.StuntRally.Editor.png",
+                "mv /app/share/icons/hicolor/512x512/apps/sr-editor.png /app/share/icons/hicolor/512x512/apps/org.tuxfamily.StuntRally.Editor.png",
                 "sed -i 's:Icon=sr-editor:Icon=org.tuxfamily.StuntRally.Editor:' /app/share/applications/sr-editor.desktop",
                 "mv /app/share/applications/sr-editor.desktop /app/share/applications/org.tuxfamily.StuntRally.Editor.desktop"
         ]

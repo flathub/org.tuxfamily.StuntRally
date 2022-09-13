@@ -248,6 +248,9 @@
             "build-options": {
                 "cxxflags": "-fpermissive -std=c++14 -Wno-deprecated-declarations"
             },
+            "config-opts": [
+                "-DBUILD_TRANSL_TOOL=OFF"
+            ],
             "sources": [
                 {
                     "type": "git",

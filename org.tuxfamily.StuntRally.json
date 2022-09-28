@@ -259,6 +259,14 @@
                     "commit": "1777e5e781527097d486aba381cc1733de53c398"
                 },
                 {
+                    "type": "patch",
+                    "path": "cmake_icon.patch"
+                },
+                {
+                    "type": "file",
+                    "path": "stuntrally.png"
+                },
+                {
                     "type": "file",
                     "path": "org.tuxfamily.StuntRally.appdata.xml"
                 }

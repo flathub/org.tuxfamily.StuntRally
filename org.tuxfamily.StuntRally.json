@@ -160,8 +160,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/OGRECave/ogre/archive/v13.4.4.tar.gz",
-                    "sha256": "7cf05dbb3acbfc9326daecb60429a8ae9ce7625fb425e6a29de00cf77454596f"
+                    "url": "https://github.com/OGRECave/ogre/archive/v13.5.1.tar.gz",
+                    "sha256": "ce7e0c65d3395ad214567bdd616ee20df16769f452f1fd3e1ac6c5970890df81"
                 }
             ]
         },
@@ -256,7 +256,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/stuntrally.git",
-                    "commit": "1777e5e781527097d486aba381cc1733de53c398"
+                    "commit": "58c8c8d0e02cbebbfec690a12bfefaacef58f72c"
                 },
                 {
                     "type": "file",
@@ -277,7 +277,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/tracks.git",
-                    "commit": "bef80ff5cdec845c3d04b7066c7d96eb025332db"
+                    "commit": "5079a3a6896cefab1180217c6b62669e8c8f7859"
                 }
             ],
             "build-commands": [

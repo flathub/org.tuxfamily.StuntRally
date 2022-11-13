@@ -277,7 +277,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/stuntrally/tracks.git",
-                    "commit": "d981cf48d25451cae185b840770d17636005365b"
+                    "commit": "e7d229f112c820cb91f1e22a5d23beafffe11809"
                 }
             ],
             "build-commands": [

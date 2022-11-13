@@ -1,7 +1,7 @@
 {
     "app-id": "org.tuxfamily.StuntRally",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "18.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
         "--device=all",
@@ -17,18 +17,19 @@
         "/include",
         "/lib/pkgconfig",
         "/share/aclocal",
+        "/share/doc",
         "/share/man",
         "*.la", "*.a"
     ],
     "modules": [
-        "shared-modules/glu/glu-9.0.0.json",
+        "shared-modules/glu/glu-9.json",
         {
             "name": "libXmu",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
-                    "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
+                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.4.tar.gz",
+                    "sha256": "3091d711cdc1d8ea0f545a13b90d1464c3c3ab64778fd121f0d789b277a80289"
                 }
             ]
         },
@@ -37,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.x.org/releases/individual/lib/libXaw-1.0.13.tar.bz2",
-                    "sha256": "8ef8067312571292ccc2bbe94c41109dcf022ea5a4ec71656a83d8cce9edb0cd"
+                    "url": "https://www.x.org/releases/individual/lib/libXaw-1.0.14.tar.bz2",
+                    "sha256": "76aef98ea3df92615faec28004b5ce4e5c6855e716fa16de40c32030722a6f8e"
                 }
             ]
         },
@@ -55,8 +56,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz",
-                    "sha256": "7cf9f447ae7ed1c51722efc45e7f14418d15d7a1e143ac9f09a668999f4fc94d"
+                    "url": "https://prdownloads.sourceforge.net/swig/swig-4.0.2.tar.gz",
+                    "sha256": "d53be9730d8d58a16bf0cbd1f8ac0c0c3e1090573168bfa151b01eb47fa906fc"
                 }
             ]
         },
@@ -65,18 +66,19 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://zlib.net/zlib-1.2.11.tar.gz",
-                    "sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1"
+                    "url": "https://zlib.net/zlib-1.2.13.tar.gz",
+                    "sha256": "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30"
                 }
             ]
         },
         {
             "name": "zziplib",
+            "buildsystem": "cmake",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/gdraheim/zziplib/archive/v0.13.69.tar.gz",
-                    "sha256": "846246d7cdeee405d8d21e2922c6e97f55f24ecbe3b6dcf5778073a88f120544"
+                    "url": "https://github.com/gdraheim/zziplib/archive/v0.13.72.tar.gz",
+                    "sha256": "93ef44bf1f1ea24fc66080426a469df82fa631d13ca3b2e4abaeab89538518dc"
                 }
             ]
         },
@@ -84,13 +86,13 @@
             "name": "FreeImage",
             "no-autogen": true,
             "build-options": {
-                "cxxflags": "-Wno-narrowing"
+                "cxxflags": "-Wno-narrowing -std=c++14"
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://downloads.sourceforge.net/freeimage/FreeImage3160.zip",
-                    "sha256": "03af32dd60140d07515ddfe7b4f467baa3b888a72ea78828811aded7adb42f60"
+                    "url": "http://downloads.sourceforge.net/freeimage/FreeImage3180.zip",
+                    "sha256": "f41379682f9ada94ea7b34fe86bf9ee00935a3147be41b6569c9605a53e438fd"
                 },
                 {
                     "type": "patch",
@@ -104,8 +106,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.63.0/source/boost_1_63_0.tar.gz",
-                    "sha256": "fe34a4e119798e10b8cc9e565b3b0284e9fd3977ec8a1b19586ad1dec397088b"
+                    "url": "https://sourceforge.net/projects/boost/files/boost/1.80.0/boost_1_80_0.tar.bz2",
+                    "sha256": "1e19565d82e43bc59209a168f5ac899d3ba471d55c7610c677d4ccf2c9c500c0"
                 }
             ],
             "build-commands": [
@@ -115,11 +117,23 @@
         },
         {
             "name": "OIS",
+            "buildsystem": "cmake",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/wgois/OIS/archive/v1.4.tar.gz",
-                    "sha256": "aaa9289a0cc0bffbb03e894b1d10e65eac14572a2282d539afe48aec1ae35c75"
+                    "url": "https://github.com/wgois/OIS/archive/v1.5.1.tar.gz",
+                    "sha256": "614f6ef6d69cf6d84f1b50efff46a6c1acce426933e5f0dcf29862ea8332af73"
+                }
+            ]
+        },
+        {
+            "name": "pugixml",
+            "buildsystem": "cmake",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/zeux/pugixml/releases/download/v1.13/pugixml-1.13.tar.gz",
+                    "sha256": "40c0b3914ec131485640fa57e55bf1136446026b41db91c1bef678186a12abbe"
                 }
             ]
         },
@@ -130,8 +144,14 @@
                 "-DOGRE_BUILD_COMPONENT_PAGING=TRUE",
                 "-DOGRE_BUILD_COMPONENT_TERRAIN=TRUE",
                 "-DOGRE_BUILD_PLUGIN_PFX=TRUE",
+                "-DOGRE_BUILD_PLUGIN_GLSLANG=FALSE",
+                "-DOGRE_BUILD_PLUGIN_ASSIMP=FALSE",
                 "-DOGRE_BUILD_SAMPLES=FALSE",
-                "-DOGRE_BUILD_TESTS=FALSE"
+                "-DOGRE_BUILD_TESTS=FALSE",
+                "-DOGRE_BUILD_COMPONENT_OVERLAY_IMGUI=FALSE",
+                "-DOGRE_BUILD_COMPONENT_CSHARP=FALSE",
+                "-DOGRE_RESOURCEMANAGER_STRICT=0",
+                "-DOGRE_NODELESS_POSITIONING=ON"
             ],
             "build-options": {
                 "cxxflags": "-L/app/lib -lboost_system -lboost_thread",
@@ -140,8 +160,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/OGRECave/ogre/archive/v1.9.1.tar.gz",
-                    "sha256": "f1ef1fad757246ca43f1b81515c3af0e547ad0dfa3c14048bb87b654ee48a9ac"
+                    "url": "https://github.com/OGRECave/ogre/archive/v13.5.1.tar.gz",
+                    "sha256": "ce7e0c65d3395ad214567bdd616ee20df16769f452f1fd3e1ac6c5970890df81"
                 }
             ]
         },
@@ -151,13 +171,13 @@
             "config-opts": [
                 "-DBUILD_SHARED_LIBS=ON",
                 "-DINSTALL_EXTRA_LIBS=ON",
-                "-DBUILD_DEMOS=OFF"
+                "-DBUILD_CPU_DEMOS=OFF"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/bulletphysics/bullet3/archive/2.83.7.tar.gz",
-                    "sha256": "919087c764d0e93555c6ef0830c8951a9caafea99f52ac8b366e96adbe0112ed"
+                    "url": "https://github.com/bulletphysics/bullet3/archive/refs/tags/3.24.tar.gz",
+                    "sha256": "6b1e987d6f8156fa8a6468652f4eaad17b3e11252c9870359e5bca693e35780b"
                 }
             ]
         },
@@ -174,8 +194,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/MyGUI/mygui/archive/MyGUI3.2.1.tar.gz",
-                    "sha256": "37232d736159cd7d1a4d0291d714964505b7edc8d65cb0147533259d102f78cc"
+                    "url": "https://github.com/MyGUI/mygui/archive/MyGUI3.4.1.tar.gz",
+                    "sha256": "bdf730bdeb4ad89e6b8223967db01aa5274d2b93adc2c0d6aa4842faeed4de1a"
                 }
             ]
         },
@@ -184,8 +204,40 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://enet.bespin.org/download/enet-1.3.13.tar.gz",
-                    "sha256": "e36072021faa28731b08c15b1c3b5b91b911baf5f6abcc7fe4a6d425abada35c"
+                    "url": "http://enet.bespin.org/download/enet-1.3.17.tar.gz",
+                    "sha256": "a38f0f194555d558533b8b15c0c478e946310022d0ec7b34334e19e4574dcedc"
+                }
+            ]
+        },
+        {
+            "name": "tinyxml",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://sources.buildroot.net/tinyxml/tinyxml-2.6.2_2.tar.gz",
+                    "sha256": "8164c9ad48b9028667768a584d62f7760cfbfb90d0dd6214ad174403058da10c"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "autoreconf -vfi"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "tinyxml2",
+            "buildsystem": "cmake-ninja",
+            "build-options": {
+                "cflags": "-fPIC",
+                "cxxflags": "-fPIC"
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/leethomason/tinyxml2/archive/refs/tags/9.0.0.tar.gz",
+                    "sha256": "cc2f1417c308b1f6acc54f88eb70771a0bf65f76282ce5c40e54cfe52952702c"
                 }
             ]
         },
@@ -194,21 +246,17 @@
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "build-options": {
-                "cxxflags": "-fpermissive"
+                "cxxflags": "-fpermissive -std=c++14 -Wno-deprecated-declarations"
             },
+            "config-opts": [
+                "-DBUILD_TRANSL_TOOL=OFF",
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/stuntrally/stuntrally/archive/2.6.1.tar.gz",
-                    "sha256": "9bf0507c4235ffaeee019a852124b6cffc311afe3275ae8472eadff4441fb8ff"
-                },
-                {
-                    "type": "patch",
-                    "path": "cmake_icon.patch"
-                },
-                {
-                    "type": "file",
-                    "path": "stuntrally.png"
+                    "type": "git",
+                    "url": "https://github.com/stuntrally/stuntrally.git",
+                    "commit": "baf2bf9c351ff2ded795f95a0657601c5acf940b"
                 },
                 {
                     "type": "file",
@@ -216,9 +264,8 @@
                 }
             ],
             "post-install": [
-                "install -Dm644 ../stuntrally.png /app/share/icons/hicolor/256x256/apps/stuntrally.png",
                 "install -Dm644 ../org.tuxfamily.StuntRally.appdata.xml /app/share/appdata/org.tuxfamily.StuntRally.appdata.xml",
-                "mv /app/share/icons/hicolor/64x64/apps/sr-editor.png /app/share/icons/hicolor/64x64/apps/org.tuxfamily.StuntRally.Editor.png",
+                "mv /app/share/icons/hicolor/512x512/apps/sr-editor.png /app/share/icons/hicolor/512x512/apps/org.tuxfamily.StuntRally.Editor.png",
                 "sed -i 's:Icon=sr-editor:Icon=org.tuxfamily.StuntRally.Editor:' /app/share/applications/sr-editor.desktop",
                 "mv /app/share/applications/sr-editor.desktop /app/share/applications/org.tuxfamily.StuntRally.Editor.desktop"
         ]
@@ -228,9 +275,9 @@
             "buildsystem": "simple",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/stuntrally/tracks/archive/2.6.1.tar.gz",
-                    "sha256": "fa83ecf6dcc6e906542f3bd07677ad4369cfe4d12c639837a0f90946d47dd474"
+                    "type": "git",
+                    "url": "https://github.com/stuntrally/tracks.git",
+                    "commit": "d981cf48d25451cae185b840770d17636005365b"
                 }
             ],
             "build-commands": [

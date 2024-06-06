@@ -1,7 +1,7 @@
 {
     "app-id": "org.tuxfamily.StuntRally",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
         "--device=all",
@@ -40,6 +40,19 @@
                     "type": "archive",
                     "url": "https://www.x.org/releases/individual/lib/libXaw-1.0.14.tar.bz2",
                     "sha256": "76aef98ea3df92615faec28004b5ce4e5c6855e716fa16de40c32030722a6f8e"
+                }
+            ]
+        },
+        {
+            "name": "pcre",
+            "config-opts": [
+                "--enable-unicode-properties"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://prdownloads.sourceforge.net/pcre/pcre-8.45.tar.bz2",
+                    "sha256": "4dae6fdcd2bb0bb6c37b5f97c33c2be954da743985369cddac3546e3218bffb8"
                 }
             ]
         },

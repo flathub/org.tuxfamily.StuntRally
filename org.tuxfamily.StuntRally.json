@@ -99,6 +99,7 @@
             "name": "FreeImage",
             "no-autogen": true,
             "build-options": {
+                "cflags": "-std=gnu89",
                 "cxxflags": "-Wno-narrowing -std=c++14"
             },
             "sources": [

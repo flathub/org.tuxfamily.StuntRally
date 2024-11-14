@@ -1,0 +1,54 @@
+diff --git a/CMake/Packages/FindOGRE_next.cmake b/CMake/Packages/FindOGRE_next.cmake
+index de43200a9..56681f09a 100644
+--- a/CMake/Packages/FindOGRE_next.cmake
++++ b/CMake/Packages/FindOGRE_next.cmake
+@@ -2,16 +2,16 @@
+ 
+ message(STATUS "Ogre3:  Setting fixed paths, one up")
+ 
+-get_filename_component(DIR_ONE_ABOVE ../ ABSOLUTE)
++#get_filename_component(DIR_ONE_ABOVE ../ ABSOLUTE)
+ message(STATUS ${DIR_ONE_ABOVE})
+ 
+-set(OGRE_NEXT ${DIR_ONE_ABOVE}/Ogre/ogre-next)
++#set(OGRE_NEXT ${DIR_ONE_ABOVE}/Ogre/ogre-next)
+ #set(OGRE_NEXT "../Ogre/ogre-next")
+ 
+-set(OGRE_CONFIG_INCLUDE_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/include)
+-set(OGRE_INCLUDE_DIR ${OGRE_NEXT}/OgreMain/include)
+-set(OGRE_LIBRARIES ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib/libOgreMain.so.3.0)
+-set(OGRE_LIB_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib)
++#set(OGRE_CONFIG_INCLUDE_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/include)
++#set(OGRE_INCLUDE_DIR ${OGRE_NEXT}/OgreMain/include)
++#set(OGRE_LIBRARIES ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib/libOgreMain.so.3.0)
++#set(OGRE_LIB_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib)
+ 
+ message(STATUS "Ogre3    config: " ${OGRE_CONFIG_INCLUDE_DIR})
+ message(STATUS "Ogre3   include: " ${OGRE_INCLUDE_DIR})
+diff --git a/CMake/Packages/FindOGRE_next_Linux.cmake b/CMake/Packages/FindOGRE_next_Linux.cmake
+index de43200a9..56681f09a 100644
+--- a/CMake/Packages/FindOGRE_next_Linux.cmake
++++ b/CMake/Packages/FindOGRE_next_Linux.cmake
+@@ -2,16 +2,16 @@
+ 
+ message(STATUS "Ogre3:  Setting fixed paths, one up")
+ 
+-get_filename_component(DIR_ONE_ABOVE ../ ABSOLUTE)
++#get_filename_component(DIR_ONE_ABOVE ../ ABSOLUTE)
+ message(STATUS ${DIR_ONE_ABOVE})
+ 
+-set(OGRE_NEXT ${DIR_ONE_ABOVE}/Ogre/ogre-next)
++#set(OGRE_NEXT ${DIR_ONE_ABOVE}/Ogre/ogre-next)
+ #set(OGRE_NEXT "../Ogre/ogre-next")
+ 
+-set(OGRE_CONFIG_INCLUDE_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/include)
+-set(OGRE_INCLUDE_DIR ${OGRE_NEXT}/OgreMain/include)
+-set(OGRE_LIBRARIES ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib/libOgreMain.so.3.0)
+-set(OGRE_LIB_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib)
++#set(OGRE_CONFIG_INCLUDE_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/include)
++#set(OGRE_INCLUDE_DIR ${OGRE_NEXT}/OgreMain/include)
++#set(OGRE_LIBRARIES ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib/libOgreMain.so.3.0)
++#set(OGRE_LIB_DIR ${OGRE_NEXT}/build/${CMAKE_BUILD_TYPE}/lib)
+ 
+ message(STATUS "Ogre3    config: " ${OGRE_CONFIG_INCLUDE_DIR})
+ message(STATUS "Ogre3   include: " ${OGRE_INCLUDE_DIR})

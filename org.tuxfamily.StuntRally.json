@@ -194,6 +194,11 @@
                     "url": "https://github.com/OGRECave/ogre-next.git",
                     "commit": "75643c3997f5b6d2aa1d7bd8400b9be6736d9908"
                 }
+            ],
+            "post-install": [
+                "cp /app/include/OGRE/Hlms/Common/OgreHlmsTextureBaseClass.h /app/include/OGRE/",
+                "cp /app/include/OGRE/Hlms/Unlit/OgreHlmsUnlitDatablock.h /app/include/OGRE/",
+                "cp /app/include/OGRE/Hlms/Unlit/OgreHlmsUnlitPrerequisites.h /app/include/OGRE/"
             ]
         },
         {
@@ -217,7 +222,9 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
-                "-DMYGUI_BUILD_DEMOS=OFF"
+                "-DMYGUI_BUILD_DEMOS=OFF",
+                "-DOGRE_INCLUDE_DIR=/app/include/OGRE",
+                "-DOGRE_LIB_DIR=/app/lib"
             ],
             "build-options": {
                 "cxxflags": "-L/app/lib -lboost_system",
@@ -228,6 +235,10 @@
                     "type": "git",
                     "url": "https://github.com/cryham/mygui-next.git",
                     "commit": "a1490ffe01d503c31a00d8277007ffcb27a4258e"
+                },
+                {
+                    "type": "patch",
+                    "path": "remove-hardcoded-ogre.patch"
                 }
             ]
         },
@@ -304,7 +315,7 @@
                 "mv /app/share/icons/hicolor/512x512/apps/sr-editor.png /app/share/icons/hicolor/512x512/apps/org.tuxfamily.StuntRally.Editor.png",
                 "sed -i 's:Icon=sr-editor:Icon=org.tuxfamily.StuntRally.Editor:' /app/share/applications/sr-editor3.desktop",
                 "mv /app/share/applications/sr-editor3.desktop /app/share/applications/org.tuxfamily.StuntRally.Editor.desktop"
-        ]
+            ]
         },
         {
             "name": "stuntrally-data",

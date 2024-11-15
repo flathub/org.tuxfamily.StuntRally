@@ -293,7 +293,9 @@
             },
             "config-opts": [
                 "-DBUILD_TRANSL_TOOL=OFF",
-                "-DCMAKE_BUILD_TYPE=Release"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DOGRE_BINARY_DIR=/app",
+                "-DOGRE_INCLUDE_DIR=/app/include/OGRE"
             ],
             "sources": [
                 {

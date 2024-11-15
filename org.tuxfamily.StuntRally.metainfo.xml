@@ -4,27 +4,25 @@
   <id>org.tuxfamily.StuntRally</id>
   <project_license>GPL-3.0</project_license>
   <metadata_license>CC0-1.0</metadata_license>
-  <launchable type="desktop-id">stuntrally.desktop</launchable>
+  <launchable type="desktop-id">stuntrally3.desktop</launchable>
   <name>Stunt Rally</name>
   <developer_name>Crystal Hammer</developer_name>
   <summary>Racing game with rally style of driving</summary>
   <description>
     <p>
     Stunt Rally is a racing game with rally style of driving, mostly on gravel.
-    It features a rich variety of 202 tracks in 37 sceneries also on other planets.
+    It features a rich variety of 229 tracks in 40 sceneries also on other planets.
     </p>
     <p>
     Track difficulty ranges from short and easy to very difficult stunt tracks
     including jumps, skewed loops, pipes winding in 3D, obstacles or all at once.
     </p>
     <p>
-    There are 11 regular and 6 extreme cars to choose, 2 motorbikes,
-    an 8 wheeled bus, 1 old truck, 3 hovering spaceships and 1 bouncing sphere.
-    The latter provide a fast and easier gameplay on flat tracks.
+    There are 33 vehicles to choose from, which include both regular cars and Sci-Fi hovering.
     </p>
     <p>
     Game modes include:
-    Single Race, Tutorials, Championships, Challenges, Multiplayer and Split Screen.
+    Single Race, Tutorials, Championships, Challenges, Collections, Multiplayer and Split Screen.
     Also Replays and Ghost drive are present.
     </p>
     <p>
@@ -33,14 +31,18 @@
   </description>
   <url type="homepage">https://stuntrally.tuxfamily.org</url>
   <screenshots>
-    <screenshot type="default"><image>https://stuntrally.tuxfamily.org/uploads/images/sr3/1.jpg</image></screenshot>
-    <screenshot><image>https://stuntrally.tuxfamily.org/uploads/images/sr3/4.jpg</image></screenshot>
-    <screenshot><image>https://stuntrally.tuxfamily.org/uploads/images/sr3/5.jpg</image></screenshot>
-    <screenshot><image>https://stuntrally.tuxfamily.org/uploads/images/sr3/3.jpg</image></screenshot>
+    <screenshot type="default"><image>https://stuntrally.tuxfamily.org/uploads/images/sr32/01.jpg</image></screenshot>
+    <screenshot><image>https://stuntrally.tuxfamily.org/uploads/images/sr32/04.jpg</image></screenshot>
+    <screenshot><image>https://stuntrally.tuxfamily.org/uploads/images/sr32/09.jpg</image></screenshot>
+    <screenshot><image>https://stuntrally.tuxfamily.org/uploads/images/sr32/20.jpg</image></screenshot>
   </screenshots>
   <update_contact>mail@asciiwolf.com</update_contact>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="3.2" date="2024-09-23"/>
+    <release version="3.1" date="2024-04-26"/>
+    <release version="3.0.1" date="2023-12-23"/>
+    <release version="3.0" date="2023-12-03"/>
     <release version="2.7" date="2022-11-11"/>
     <release version="2.6.2" date="2022-03-25"/>
     <release version="2.6.1" date="2019-03-16"/>

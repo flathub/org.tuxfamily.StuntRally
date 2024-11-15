@@ -1,0 +1,26 @@
+From f3b230215e4a99f1c01f6eda1f7d938e2932e388 Mon Sep 17 00:00:00 2001
+From: cryham <cryham@gmail.com>
+Date: Mon, 11 Nov 2024 14:19:59 +0100
+Subject: [PATCH] dist/CMakeLists.txt
+
+---
+ dist/CMakeLists.txt | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 dist/CMakeLists.txt
+
+diff --git a/dist/CMakeLists.txt b/dist/CMakeLists.txt
+new file mode 100644
+index 00000000..e0d502ba
+--- /dev/null
++++ b/dist/CMakeLists.txt
+@@ -0,0 +1,7 @@
++
++if(UNIX)
++	install(FILES stuntrally3.desktop sr-editor3.desktop DESTINATION "share/applications/")
++	install(FILES ../data/gui/stuntrally.png DESTINATION "share/icons/hicolor/512x512/apps/")
++	install(FILES ../data/gui/sr-editor.png DESTINATION "share/icons/hicolor/512x512/apps/")
++endif()
++
+-- 
+2.47.0
+

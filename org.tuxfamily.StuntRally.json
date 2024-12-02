@@ -1,7 +1,7 @@
 {
     "app-id": "org.tuxfamily.StuntRally",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
         "--device=all",
@@ -44,6 +44,22 @@
             ]
         },
         {
+            "name": "pcre",
+            "config-opts": [
+                "--enable-unicode-properties"
+            ],
+            "cleanup": [
+                "*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://prdownloads.sourceforge.net/pcre/pcre-8.42.tar.bz2",
+                    "sha256": "2cd04b7c887808be030254e8d77de11d3fe9d4505c39d4b15d2664ffe8bf9301"
+                }
+            ]
+        },
+        {
             "name": "SWIG",
             "config-opts": [
                 "--without-boost",
@@ -62,18 +78,12 @@
             ]
         },
         {
-            "name": "zlib",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/madler/zlib/releases/download/v1.2.13/zlib-1.2.13.tar.gz",
-                    "sha256": "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30"
-                }
-            ]
-        },
-        {
             "name": "zziplib",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "build-options": {
+                "cflags": "-fpermissive"
+            },
             "sources": [
                 {
                     "type": "archive",
@@ -86,6 +96,7 @@
             "name": "FreeImage",
             "no-autogen": true,
             "build-options": {
+                "cflags": "-fpermissive",
                 "cxxflags": "-Wno-narrowing -std=c++14"
             },
             "sources": [
@@ -117,7 +128,7 @@
         },
         {
             "name": "OIS",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
@@ -128,7 +139,7 @@
         },
         {
             "name": "pugixml",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
@@ -196,6 +207,10 @@
                     "type": "archive",
                     "url": "https://github.com/MyGUI/mygui/archive/MyGUI3.4.1.tar.gz",
                     "sha256": "bdf730bdeb4ad89e6b8223967db01aa5274d2b93adc2c0d6aa4842faeed4de1a"
+                },
+                {
+                    "type": "patch",
+                    "path": "mygui-build.patch"
                 }
             ]
         },

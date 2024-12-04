@@ -97,7 +97,13 @@
             "no-autogen": true,
             "build-options": {
                 "cflags": "-fpermissive",
-                "cxxflags": "-Wno-narrowing -std=c++14"
+                "cxxflags": "-Wno-narrowing -std=c++14",
+                "arch": {
+                    "aarch64": {
+                        "cflags": "-fPIC -DPNG_ARM_NEON_OPT=0",
+                        "cxxflags": "-fPIC -DPNG_ARM_NEON_OPT=0"
+                    }
+                }
             },
             "sources": [
                 {
@@ -166,7 +172,13 @@
             ],
             "build-options": {
                 "cxxflags": "-L/app/lib -lboost_system -lboost_thread",
-                "ldflags": "-L/app/lib -lboost_system -lboost_thread"
+                "ldflags": "-L/app/lib -lboost_system -lboost_thread",
+                "arch": {
+                    "aarch64": {
+                        "cflags": "-fPIC",
+                        "cxxflags": "-fPIC"
+                    }
+                }
             },
             "sources": [
                 {
@@ -200,7 +212,13 @@
             ],
             "build-options": {
                 "cxxflags": "-L/app/lib -lboost_system",
-                "ldflags": "-L/app/lib -lboost_system"
+                "ldflags": "-L/app/lib -lboost_system",
+                "arch": {
+                    "aarch64": {
+                        "cflags": "-fPIC",
+                        "cxxflags": "-fPIC"
+                    }
+                }
             },
             "sources": [
                 {

@@ -1,0 +1,21 @@
+From 4d8b4deeee3e0c947af75cf55ed10ab9f3546d56 Mon Sep 17 00:00:00 2001
+From: Sirius902 <3645979-Sirius902@users.noreply.gitlab.com>
+Date: Sat, 11 Oct 2025 08:02:16 +0200
+Subject: [PATCH] [cmake] Remove unnecessary add_dependencies
+
+---
+ CMakeLists.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 98c67d3..006b36b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -218,7 +218,6 @@ endif()
+ if(UNIX)
+ 
+     if (NOT APPLE)
+-        add_dependencies(OIS X11)
+         target_link_libraries(OIS X11)
+     endif()
+ 

@@ -1,0 +1,25 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 72dbe99d3..c954dfeca 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -8,7 +8,7 @@
+ cmake_minimum_required(VERSION 2.8.12)
+ cmake_policy(SET CMP0003 NEW)
+ cmake_policy(SET CMP0011 NEW)
+-cmake_policy(SET CMP0048 OLD)
++cmake_policy(SET CMP0048 NEW)
+ 
+ # for link time optimization, remove if cmake version is >= 3.9
+ if(POLICY CMP0069) # LTO
+diff --git a/MyGUIEngine/include/MyGUI_Types.h b/MyGUIEngine/include/MyGUI_Types.h
+index bdd085d3d..cdce6cc72 100644
+--- a/MyGUIEngine/include/MyGUI_Types.h
++++ b/MyGUIEngine/include/MyGUI_Types.h
+@@ -9,6 +9,7 @@
+ 
+ #include "MyGUI_Prerequest.h"
+ 
++#include <cstdint>
+ #include <vector>
+ #include <map>
+ #include <string>

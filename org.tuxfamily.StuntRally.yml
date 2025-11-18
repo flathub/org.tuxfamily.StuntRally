@@ -158,6 +158,10 @@ modules:
           type: anitya
           project-id: 696
           url-template: https://github.com/lsalzman/enet/archive/v$version.tar.gz
+          versions:
+            # Disabling updates for this dependency for this app
+            '>': '9999'
+
       - type: script  # cf. https://github.com/lsalzman/enet/blob/master/README
         dest-filename: autogen.sh
         commands:
